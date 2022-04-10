@@ -58,6 +58,7 @@ export class LoginComponent implements OnInit {
         this.errorMessage = errors[0].message
         return
       }
+      console.log(data)
       this.response = data?.authenticateUser
       localStorage.setItem("token", JSON.stringify(this.response?.token));
       localStorage.setItem("user", JSON.stringify(this.response?.user));
